@@ -299,10 +299,6 @@ function Hero() {
             <div><dt className="sr-only">Projetos</dt><dd><strong>6</strong><span>Projetos publicados</span></dd></div>
             <div><dt className="sr-only">Clientes</dt><dd><strong>3</strong><span>Entregas para cliente real</span></dd></div>
           </dl>
-          <div className="hero-links-row rv">
-            <a href={LINKS.invictosSite} target="_blank" rel="noreferrer">invictosportas.com.br <span aria-hidden="true">↗</span></a>
-            <a href={LINKS.invictosPost} target="_blank" rel="noreferrer">Ver demo do sistema em produção <span aria-hidden="true">↗</span></a>
-          </div>
         </div>
 
         <aside className="hero-card rv" aria-label="Resumo profissional">
