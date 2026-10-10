@@ -500,27 +500,25 @@ function AboutStack() {
           <p className="kicker">Sobre</p>
           <h3>Do e-commerce para o código</h3>
           <p>
-            Com mais de <strong>10 anos</strong> em <strong>operações logísticas</strong>, e experiência prévia como <strong>analista de e-commerce</strong>, decidi migrar para a área de desenvolvimento de software. A vivência em processos e sistemas me deu base para entender melhor as necessidades do negócio.
+            Com mais de <strong>10 anos</strong> em <strong>operações logísticas</strong>, e experiência prévia como <strong>analista de e-commerce</strong>, decidi migrar para a área de desenvolvimento de software. A vivência em processos e sistemas me deu base para entender melhor, e propor melhorias às necessidades de negócio de cada cliente.
           </p>
           <p>
             Hoje sou <strong>desenvolvedor Full Stack Júnior</strong> formado na <strong>Residência Serratec (770h)</strong>,
-            com um sistema em produção para um cliente real, onde pude entender as necessidades do negócio com a minha experiência prévia, e aplicar meus conhecimentos de desenvolvimento para entregar uma solução completa.
+            <strong> com sistemas em ambiente de produção</strong> para um cliente real, onde pude por em prática minha experiência prévia, e aplicar meus conhecimentos de desenvolvimento para entregar uma <strong>solução completa</strong>.
           </p>
           <div className="timeline">
             <div className="tl">
-              <span className="tl-icon" aria-hidden="true">▣</span>
               <div>
                 <small>2026 • FREELANCE</small>
                 <strong>Desenvolvedor Full Stack - Invictos Portas</strong>
-                <span>Java • Spring Boot • Spring Security • JWT • React • TypeScript • PostgreSQL • APIs REST • GitHub • Bling API </span>
+                <span>Desenvolvi um sistema automatizado de gerenciamento de orçamentos, integrando tecnologias modernas. <br></br> • Java • Spring Boot • Spring Security • JWT • React • TypeScript • PostgreSQL • APIs REST • GitHub • Bling API </span>
               </div>
             </div>
             <div className="tl">
-              <span className="tl-icon" aria-hidden="true">◈</span>
               <div>
                 <small>ANTERIOR • E-COMMERCE</small>
                 <strong>Analista de E-commerce</strong>
-                <span>Implantei operações de ecommerce • Automação de processos • Atendimento ao cliente • Vendas • Marketplaces • Operações Logísticas • WMS • Notas Fiscais • Liderança de equipe • Relatórios em planilhas</span>
+                <span>Implantei operações de ecommerce com lojas virtuais, marketplaces, integração de sistemas, automação de processos e gestão de estoques. <br></br> • Vendas • Marketplaces • Operações Logísticas • WMS • Notas Fiscais • Relatórios em planilhas</span>
               </div>
             </div>
           </div>
