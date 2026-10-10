@@ -8,6 +8,9 @@ import printSistemaJava from './assets/print-sistema-invictos-java-react.png'
 import printRecomendacoes from './assets/print-sistema-recomendacoes-zeiss.png'
 import printSistemaPhp from './assets/print-sistema-invictos-php.png'
 import printLastClue from './assets/print-the-last-clue.png'
+import printTechbox from './assets/electronics-store-print.png'
+import printTheWall from './assets/theWall4-print.png'
+import printAmorosa from './assets/amorosa-fashion.png'
 
 /* ============ DATA ============ */
 
@@ -21,9 +24,13 @@ const LINKS = {
   iaVideo: 'https://www.youtube.com/watch?v=eHMcwWnN_n0&t=963s',
   lastClue: 'https://lnkd.in/dw6jEuvV',
   weather: 'https://lnkd.in/dXT_G6KX',
+  techbox: 'https://lojatechbox.lojavirtualnuvem.com.br/',
+  thewall: 'https://thewall4.lojavirtualnuvem.com.br/',
+  amorosa: 'https://amorosafashion.lojavirtualnuvem.com.br/',
+  whatsapp: 'https://wa.me/5521985926004?text=Ol%C3%A1%20Elionardo!%20Vi%20seu%20portfolio%20e%20gostaria%20de%20conversar',
 }
 
-type Kind = 'Cliente real' | 'Residência'
+type Kind = 'Cliente real' | 'Residência' | 'Demo'
 
 type Project = {
   title: string
@@ -32,6 +39,7 @@ type Project = {
   description: string
   inProduction?: boolean
   teamProject?: boolean
+  ecommerce?: boolean
   bullets?: string[]
   stack: string[]
   image?: string
@@ -128,6 +136,42 @@ const PROJECTS: Project[] = [
     image: printSiteInvictos,
     demo: LINKS.invictosSite,
     demoLabel: 'Visitar site',
+  },
+  {
+    title: 'TechBox — Loja de eletrônicos',
+    kind: 'Demo',
+    year: '2026',
+    ecommerce: true,
+    description:
+      'Loja demo de eletrônicos desenvolvida por mim na plataforma Nuvemshop, com catálogo, checkout e gestão de pedidos. Apesar de ser demonstração, é 100% funcional.',
+      stack: ['Nuvemshop', 'E-commerce', 'Configuração de loja', 'Pagamentos', 'Envios', 'Marketplaces',  'ERPs'],
+      image: printTechbox,
+    demo: LINKS.techbox,
+    demoLabel: 'Visitar loja',
+  },
+  {
+    title: 'The Wall — Moda e vestuário',
+    kind: 'Demo',
+    year: '2026',
+    ecommerce: true,
+    description:
+      'Loja demo de moda e vestuário desenvolvida por mim na plataforma Nuvemshop, com vitrine, catálogo e checkout configurados. Apesar de ser demonstração, é 100% funcional.',
+    stack: ['Nuvemshop', 'E-commerce', 'Configuração de loja', 'Pagamentos', 'Envios', 'Marketplaces',  'ERPs'],
+    image: printTheWall,
+    demo: LINKS.thewall,
+    demoLabel: 'Visitar loja',
+  },
+  {
+    title: 'Amorosa Fashion — Moda e vestuário',
+    kind: 'Demo',
+    year: '2026',
+    ecommerce: true,
+    description:
+      'Loja demo de moda feminina desenvolvida por mim na plataforma Nuvemshop, com vitrine, catálogo e checkout configurados. Apesar de ser demonstração, é 100% funcional.',
+    stack: ['Nuvemshop', 'E-commerce', 'Configuração de loja', 'Pagamentos', 'Envios', 'Marketplaces',  'ERPs'],
+    image: printAmorosa,
+    demo: LINKS.amorosa,
+    demoLabel: 'Visitar loja',
   },
 ]
 
@@ -296,7 +340,7 @@ function Hero() {
           </div>
           <dl className="hero-meta rv">
             <div><dt className="sr-only">Formação</dt><dd><strong>770h</strong><span>Residência Serratec</span></dd></div>
-            <div><dt className="sr-only">Projetos</dt><dd><strong>6</strong><span>Projetos publicados</span></dd></div>
+            <div><dt className="sr-only">Projetos</dt><dd><strong>9</strong><span>Projetos publicados</span></dd></div>
             <div><dt className="sr-only">Clientes</dt><dd><strong>3</strong><span>Entregas para cliente real</span></dd></div>
           </dl>
         </div>
@@ -352,10 +396,11 @@ function FeaturedRow({ p, isMain = false, onPlay }: { p: Project; isMain?: boole
       <div className="featured-body">
         <div className="pill-row">
           {isMain && <span className="pill pill-client">★ Projeto em destaque</span>}
-          <span className={p.kind === 'Cliente real' ? 'pill pill-real' : 'pill pill-res'}>{p.kind}</span>
+          <span className={p.kind === 'Cliente real' ? 'pill pill-real' : p.kind === 'Demo' ? 'pill pill-demo' : 'pill pill-res'}>{p.kind}</span>
           <span className="pill pill-soft">{p.year}</span>
           {p.inProduction && <span className="pill pill-prod"><i className="prod-dot" />Em produção</span>}
           {p.teamProject && <span className="pill pill-team">Desenvolvido em equipe</span>}
+          {p.ecommerce && <span className="pill pill-ecom">E-commerce</span>}
         </div>
         <h3>{p.title}</h3>
         <p>{p.description}</p>
@@ -421,10 +466,10 @@ function ProjectsSection() {
         <div className="sec-head">
           <div>
             <h2 className="h2 rv">Projetos em destaque</h2>
-            <p className="lead rv">6 trabalhos: 3 entregas para cliente real e 3 projetos da Residência Serratec.</p>
+            <p className="lead rv">9 trabalhos: 3 entregas para cliente real, 3 projetos da Residência Serratec e 3 lojas demo.</p>
           </div>
           <div className="filters rv" role="group" aria-label="Filtrar projetos">
-            {(['Todos', 'Cliente real', 'Residência'] as const).map((f) => (
+            {(['Todos', 'Cliente real', 'Residência', 'Demo'] as const).map((f) => (
               <button key={f} type="button" className={`filter${filter === f ? ' active' : ''}`} onClick={() => setFilter(f)} aria-pressed={filter === f}>
                 {f}
               </button>
@@ -465,7 +510,7 @@ function AboutStack() {
             <div className="tl">
               <span className="tl-icon" aria-hidden="true">▣</span>
               <div>
-                <small>2024 — ATUAL • FREELANCE</small>
+                <small>2026 • FREELANCE</small>
                 <strong>Desenvolvedor Full Stack - Invictos Portas</strong>
                 <span>Java • Spring Boot • Spring Security • JWT • React • TypeScript • PostgreSQL • APIs REST • GitHub • Bling API </span>
               </div>
@@ -544,7 +589,8 @@ function Contact() {
           <h2>Vamos conversar?</h2>
           <p>Sou desenvolvedor Full Stack Júnior com foco em backend Java. Busco oportunidades remotas ou híbridas — respondo rapidamente no LinkedIn.</p>
           <div className="cta-row">
-            <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="btn btn-white">LinkedIn <Arrow /></a>
+            <a href={LINKS.whatsapp} target="_blank" rel="noreferrer" className="btn btn-white">WhatsApp <Arrow /></a>
+            <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="btn btn-ghost">LinkedIn <Arrow /></a>
             <a href={LINKS.github} target="_blank" rel="noreferrer" className="btn btn-ghost">GitHub <Arrow /></a>
           </div>
           <p className="cta-note mono">Magé • RJ • Java • Spring Boot • React • PostgreSQL</p>
@@ -578,6 +624,17 @@ export default function App() {
           </nav>
         </div>
       </footer>
+      <a
+        href={LINKS.whatsapp}
+        target="_blank"
+        rel="noreferrer"
+        className="wa-float"
+        aria-label="Conversar no WhatsApp"
+      >
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9 1 1.9 2.7 3.7 4.7 4.7 1.7.9 2.5.9 3.4.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.1-.5-.2z" />
+        </svg>
+      </a>
     </>
   )
 }
