@@ -287,7 +287,7 @@ function Hero() {
           <p className="hero-desc rv">
             Olá, eu sou <strong>Elionardo Silva dos Santos</strong>. Formação de 770h na Residência
             TIC Software (Firjan SENAI - Serratec). Construo com <strong>Java • Spring Boot • React • PostgreSQL</strong>,
-            e consumo APIs REST — hoje já tenho um sistema em produção de um cliente real.
+            e consumo APIs REST — hoje já tenho sistemas em ambiente de produção sendo utilizados pelo cliente.
           </p>
           <div className="hero-actions rv">
             <a href="#projetos" className="btn btn-dark">Ver projetos</a>
