@@ -27,7 +27,7 @@ const LINKS = {
   techbox: 'https://lojatechbox.lojavirtualnuvem.com.br/',
   thewall: 'https://thewall4.lojavirtualnuvem.com.br/',
   amorosa: 'https://amorosafashion.lojavirtualnuvem.com.br/',
-  whatsapp: 'https://wa.me/5521985926004?text=Ol%C3%A1%20Elionardo!%20Vi%20seu%20portfolio%20e%20gostaria%20de%20conversar',
+  whatsapp: 'https://wa.me/5521985926004?text=Ol%C3%A1%20Elionardo!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar.',
 }
 
 type Kind = 'Cliente real' | 'Residência' | 'Demo'
