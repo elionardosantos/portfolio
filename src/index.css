@@ -31,6 +31,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html, body { max-width: 100%; overflow-x: clip; }
 body {
   margin: 0;
   font-family: var(--font);
@@ -52,7 +53,7 @@ a { color: inherit; }
 button { font-family: inherit; }
 ::selection { background: #111214; color: #fff; }
 
-.container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; min-width: 0; }
 .section { padding: 88px 0; }
 .section-soft { background: var(--bg-soft); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
 
