@@ -295,7 +295,7 @@ function Navbar() {
           <img className="brand-avatar" src={fotoPerfil} alt="Foto de Elionardo Santos" />
           <span>
             Elionardo Santos
-            <span className="brand-sub">Full Stack Júnior</span>
+            <span className="brand-sub">Web Full Stack</span>
           </span>
         </a>
         <nav className={`nav-menu${open ? ' open' : ''}`} aria-label="Navegação principal">
@@ -325,7 +325,7 @@ function Hero() {
             Disponível • Magé/RJ • Remoto
           </span>
           <h1 className="rv">
-            Full Stack Júnior<br />
+            Desenvolvedor Web Full Stack<br />
             <em>com entrega real.</em>
           </h1>
           <p className="hero-desc rv">
@@ -503,7 +503,7 @@ function AboutStack() {
             Com mais de <strong>10 anos</strong> em <strong>operações logísticas</strong>, e experiência prévia como <strong>analista de e-commerce</strong>, decidi migrar para a área de desenvolvimento de software. A vivência em processos e sistemas me deu base para entender melhor, e propor melhorias às necessidades de negócio de cada cliente.
           </p>
           <p>
-            Hoje sou <strong>desenvolvedor Full Stack Júnior</strong> formado na <strong>Residência Serratec (770h)</strong>,
+            Hoje sou <strong>desenvolvedor Web Full Stack</strong> formado na <strong>Residência Serratec (770h)</strong>,
             <strong> com sistemas em ambiente de produção</strong> para um cliente real, onde pude por em prática minha experiência prévia, e aplicar meus conhecimentos de desenvolvimento para entregar uma <strong>solução completa</strong>.
           </p>
           <div className="timeline">
@@ -585,7 +585,7 @@ function Contact() {
         <div className="cta-banner rv">
           <p className="kicker kicker-center">Contato</p>
           <h2>Vamos conversar?</h2>
-          <p>Sou desenvolvedor Full Stack Júnior com foco em backend Java. Busco oportunidades remotas ou híbridas — respondo rapidamente no LinkedIn.</p>
+          <p>Sou desenvolvedor Web Full Stack com foco em backend Java. Busco oportunidades remotas ou híbridas — respondo rapidamente no LinkedIn.</p>
           <div className="cta-row">
             <a href={LINKS.whatsapp} target="_blank" rel="noreferrer" className="btn btn-white">WhatsApp <Arrow /></a>
             <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="btn btn-ghost">LinkedIn <Arrow /></a>
